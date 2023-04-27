@@ -2,7 +2,7 @@ FROM alpine:3.11
 
 ARG KUBECTL_VERSION="v1.25.7"
 
-RUN apk add py-pip curl unzip
+RUN apk add py-pip curl unzip sudo
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.9.23.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN sudo ./aws/install

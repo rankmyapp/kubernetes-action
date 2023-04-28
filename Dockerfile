@@ -7,7 +7,7 @@ RUN git clone --single-branch --depth 1 -b ${AWS_CLI_VERSION} https://github.com
 
 ARG KUBECTL_VERSION="v1.25.7"
 
-WORKDIR aws-cli
+WORKDIR ./aws-cli
 RUN apk add py-pip curl
 RUN ./configure --with-install-type=portable-exe --with-download-deps
 RUN make
